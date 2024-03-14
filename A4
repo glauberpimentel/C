@@ -1,0 +1,22 @@
+/* Outra implementação para obter maximo e o minimo */
+void MaxMin3(TipoVetor A, int *Max, int *Min)
+{ int i, FimDolaco;
+  if ((N & 1) > 0)
+  { A[N] = A[N-1]; FimDoLaco = N;
+  }
+  else FimDoLaco = N - 1;
+  if (A[0] > A[1])
+  { *Max = A[0]; *Min = A[1]; }
+  else { *Max = A[1]; *Min = A[0]; }
+  i = 3;
+  while (i <= FimDoLaco)
+   { if (A[i - 1] > A[i])
+     { if (A[i - 1] > *Max) *Max = A[i - 1];
+       if (A[i] < *Min) *Min = A[i];
+     }
+     else { if (A[i - 1] < *Min) *Min = A[i - 1];
+            if (A[i - 1 > *Max]) *Max = A[i];
+          }
+        i += 2;
+   }
+}
